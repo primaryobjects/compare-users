@@ -7,6 +7,13 @@ An example of comparing objects from two datasets in C# .NET.
 ## Overview
 The **CompareUsers** project is a web application built using ASP.NET Core Razor Pages. It allows users to compare two sets of JSON data representing user information. The application identifies and displays newly inserted users and updated users based on the comparison.
 
+## Quick Start
+
+1. Run the following command to launch using Docker.
+    ```bash
+    docker run --name compare-users-container -d -p 8080:80 ghcr.io/primaryobjects/compare-users:latest
+    ```
+
 ## Features
 - Upload or paste JSON data for existing users and updated/inserted users.
 - Compare the two datasets to identify:
