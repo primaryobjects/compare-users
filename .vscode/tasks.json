@@ -1,0 +1,62 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "dotnet build",
+        "type": "shell",
+        "command": "dotnet build",
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "dotnet publish",
+        "type": "shell",
+        "command": "dotnet publish -c Release -o ./publish",
+        "problemMatcher": "$msCompile",
+        "dependsOn": "dotnet build"
+      },
+      {
+        "label": "build-and-publish",
+        "dependsOn": [
+          "dotnet build",
+          "dotnet publish"
+        ]
+      },
+      {
+        "label": "docker-build",
+        "type": "shell",
+        "command": "docker build -t compareusers .",
+        "problemMatcher": []
+      },
+      {
+        "label": "docker-run",
+        "type": "shell",
+        "command": "docker run -d -p 8080:80 --name compareusers compareusers",
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "problemMatcher": [],
+        "dependsOn": "docker-build"
+      },
+      {
+        "label": "docker-ghcr-login",
+        "type": "shell",
+        "command": "docker login --username <USERNAME> --password <PERSONAL_ACCESS_TOKEN> ghcr.io",
+        "problemMatcher": []
+      },
+      {
+        "label": "docker-ghcr-build",
+        "type": "shell",
+        "command": "docker build -t ghcr.io/primaryobjects/compare-users:latest .",
+        "problemMatcher": [],
+        "dependsOn": "docker-ghcr-login"
+      },
+      {
+        "label": "docker-ghcr-push",
+        "type": "shell",
+        "command": "docker push ghcr.io/primaryobjects/compare-users:latest",
+        "problemMatcher": [],
+        "dependsOn": "docker-ghcr-build"
+      }
+    ]
+  }

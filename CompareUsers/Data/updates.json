@@ -1,0 +1,41 @@
+[
+    {
+      "_id": "67f85f0a18370065174e9d29",
+      "index": 0,
+      "isActive": true,
+      "balance": "$3,252.63",
+      "age": 39,
+      "name": "Caroline Page",
+      "gender": "female",
+      "company": "GAZAK",
+      "email": "carolinepage@gazak.com",
+      "phone": "+1 (857) 410-2812",
+      "address": "241 Harway Avenue, Cotopaxi, Delaware, 1977"
+    },
+    {
+      "_id": "67f85f0ae75980488f63dced",
+      "index": 4,
+      "isActive": true,
+      "balance": "$2,729.85",
+      "age": 39,
+      "name": "Lara James",
+      "gender": "female",
+      "company": "STEELTAB",
+      "email": "larajames@steeltab.com",
+      "phone": "+1 (988) 410-2050",
+      "address": "191 Jewel Street, Longoria, Colorado, 6878"
+    },
+    {
+      "_id": "0",
+      "index": 9,
+      "isActive": false,
+      "balance": "$9,999.68",
+      "age": 32,
+      "name": "Alice Doe",
+      "gender": "female",
+      "company": "REPLY",
+      "email": "alice.doe@reply.com",
+      "phone": "+1 (215) 432-9057",
+      "address": "109 Main Ave, Philadelhia, Pennsylvania, 19103"
+    }
+  ]
