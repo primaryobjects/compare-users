@@ -1,5 +1,9 @@
 # CompareUsers
 
+An example of comparing objects from two datasets in C# .NET.
+
+![screenshot](screenshot.png)
+
 ## Overview
 The **CompareUsers** project is a web application built using ASP.NET Core Razor Pages. It allows users to compare two sets of JSON data representing user information. The application identifies and displays newly inserted users and updated users based on the comparison.
 
